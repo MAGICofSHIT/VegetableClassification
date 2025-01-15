@@ -48,7 +48,7 @@ def create_gui(model, class_names):
             label_result.config(text="Processing...")
             try:
                 predicted_class, confidence = predict(file_path, model, class_names)
-                label_result.config(text=f"Class: {predicted_class}, Confidence: {confidence:.2f}")
+                label_result.config(text=f"Class: {predicted_class}\nConfidence: {confidence:.2f}")
                 img = Image.open(file_path).resize((200, 200))
                 img = ImageTk.PhotoImage(img)
                 label_image.config(image=img)
